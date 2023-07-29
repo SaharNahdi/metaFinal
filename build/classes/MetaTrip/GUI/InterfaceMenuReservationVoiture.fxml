@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MetaTrip.GUI.InterfaceMenuReservationVoitureController">
+   <children>
+      <AnchorPane id="AnchorPane" styleClass="mainFxmlClass" stylesheets="@InterfaceMenuMoyenTransport.css">
+         <children>
+            <ImageView fitHeight="650.0" fitWidth="1050.0" focusTraversable="true" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../asset/Background.jpg" />
+               </image>
+            </ImageView>
+            <BorderPane layoutX="276.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="80.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane opacity="0.89" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #121212;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <HBox layoutX="254.0" layoutY="40.0" prefHeight="51.0" prefWidth="802.0" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                           <children>
+                              <Button prefHeight="40.0" prefWidth="160.0" styleClass="menuItem" text="Chauffeur">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../asset/dash1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button prefHeight="40.0" prefWidth="160.0" styleClass="menuItem" text="Statistique">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../asset/add-file.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button prefHeight="40.0" prefWidth="160.0" styleClass="menuItem" text="Gérer Rservation">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../asset/seo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button prefHeight="40.0" prefWidth="160.0" styleClass="menuItem" text="Voituree">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../asset/modify.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label fx:id="MenuClose" layoutX="30.0" layoutY="49.0" onMouseExited="#MenuClose" text="MENU" textFill="#b7b7b7">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Menu" layoutX="30.0" layoutY="49.0" onMouseEntered="#Menu" text="MENU" textFill="#b7b7b7">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane fx:id="slider" onMouseEntered="#Menu" onMouseExited="#MenuClose" opacity="0.8" prefHeight="362.0" prefWidth="250.0" style="-fx-background-color: #121212; -fx-background-radius: 20;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox layoutX="91.0" layoutY="139.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+                           <children>
+                              <Button fx:id="AfficherReservation" onMouseClicked="#Afficher" prefHeight="40.0" prefWidth="250.0" styleClass="sidebarItem" text="Afficher Réservation" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="40.0" fitWidth="30.0" onMouseClicked="#Statistique" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                                       <image>
+                                          <Image url="@../asset/statistique1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets top="40.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="Statistique" onMouseClicked="#Statistique" prefHeight="40.0" prefWidth="250.0" styleClass="sidebarItem" text="Statistique" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                                       <image>
+                                          <Image url="@../asset/bouton-ajouter.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets top="40.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="GererReservation" onMouseClicked="#Afficher" prefHeight="40.0" prefWidth="250.0" styleClass="sidebarItem" text="Gérer Rservation" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                                       <image>
+                                          <Image url="@../asset/afficher.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="Ajouter" onMouseClicked="#Ajouter" prefHeight="40.0" prefWidth="250.0" styleClass="sidebarItem" text="Ajouter" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                                       <image>
+                                          <Image url="@../asset/crayon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </left>
+            </BorderPane>
+            <ImageView fx:id="Exit" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="30.0" layoutX="865.0" layoutY="5.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../asset/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

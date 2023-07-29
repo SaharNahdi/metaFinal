@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MetaTrip.GUI.ChauffeurController">
+   <children>
+      <AnchorPane fx:id="left_main" layoutX="14.0" layoutY="25.0" prefHeight="500.0" prefWidth="335.0">
+         <children>
+            <TextField fx:id="id" layoutX="106.0" layoutY="14.0" onKeyTyped="#textfieldDesign" onMouseClicked="#textfieldDesign" onMouseDragged="#textfieldDesign" prefHeight="28.0" prefWidth="220.0" styleClass="textfield-design" stylesheets="@design.css" AnchorPane.leftAnchor="106.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="33.0" layoutY="18.0" text="ID:">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="surname" layoutX="106.0" layoutY="50.0" onKeyTyped="#textfieldDesign" onMouseClicked="#textfieldDesign" onMouseDragged="#textfieldDesign" prefHeight="28.0" prefWidth="220.0" styleClass="textfield-design" stylesheets="@design.css" AnchorPane.leftAnchor="106.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="33.0" layoutY="54.0" text="nom ">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tel" layoutX="109.0" layoutY="234.0" onKeyTyped="#textfieldDesign" onMouseClicked="#textfieldDesign" onMouseDragged="#textfieldDesign" prefHeight="28.0" prefWidth="220.0" styleClass="textfield-design" stylesheets="@design.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="12.0" layoutY="238.0" text="telephone">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="336.0" text="disponiblité">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="gender" layoutX="119.0" layoutY="332.0" onAction="#comboBox" onKeyTyped="#textfieldDesign" onMouseClicked="#textfieldDesign" onMouseDragged="#textfieldDesign" prefHeight="31.0" prefWidth="220.0" promptText="Choose..." styleClass="textfield-design" stylesheets="@design.css" />
+            <Label layoutX="22.0" layoutY="138.0" text="Picture:">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="106.0" layoutX="154.0" layoutY="126.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+            <Label fx:id="file_path" alignment="CENTER" layoutX="12.0" layoutY="187.0" prefHeight="23.0" prefWidth="199.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="insert" layoutX="19.0" layoutY="375.0" mnemonicParsing="false" onAction="#insert" prefHeight="46.0" prefWidth="87.0" styleClass="insert-button" stylesheets="@design.css" text="Insert" />
+            <Button fx:id="update" layoutX="126.0" layoutY="375.0" mnemonicParsing="false" onAction="#update" prefHeight="46.0" prefWidth="87.0" styleClass="update-button" stylesheets="@design.css" text="Update">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="clear" layoutX="229.0" layoutY="375.0" mnemonicParsing="false" onAction="#clear" prefHeight="46.0" prefWidth="87.0" styleClass="clear-button" stylesheets="@design.css" text="Clear" />
+            <Button fx:id="delete" layoutX="229.0" layoutY="432.0" mnemonicParsing="false" onAction="#delete" prefHeight="46.0" prefWidth="87.0" styleClass="delete-button" stylesheets="@design.css" text="Delete" />
+            <Button fx:id="print" layoutX="19.0" layoutY="432.0" mnemonicParsing="false" onAction="#print" prefHeight="46.0" prefWidth="87.0" styleClass="print-button" stylesheets="@design.css" text="Print" />
+            <ImageView fx:id="image_view" fitHeight="110.0" fitWidth="110.0" layoutX="154.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="insert_image" layoutX="154.0" layoutY="126.0" mnemonicParsing="false" onAction="#insertImage" prefHeight="106.0" prefWidth="110.0" styleClass="insert-image-button" stylesheets="@design.css" text="Insert Image" />
+            <Label layoutX="22.0" layoutY="92.0" text="prenom">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="surname1" layoutX="104.0" layoutY="88.0" onKeyTyped="#textfieldDesign" onMouseClicked="#textfieldDesign" onMouseDragged="#textfieldDesign" prefHeight="28.0" prefWidth="220.0" styleClass="textfield-design" stylesheets="@design.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="desc" layoutX="107.0" layoutY="280.0" onKeyTyped="#textfieldDesign" onMouseClicked="#textfieldDesign" onMouseDragged="#textfieldDesign" prefHeight="28.0" prefWidth="220.0" styleClass="textfield-design" stylesheets="@design.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="12.0" layoutY="283.0" text="description">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="329.0" prefHeight="550.0" prefWidth="527.0">
+         <children>
+            <Separator layoutX="11.0" layoutY="14.0" orientation="VERTICAL" prefHeight="475.0" prefWidth="1.0" />
+            <TableView fx:id="table_view" layoutX="29.0" layoutY="38.0" onMouseClicked="#selectData" prefHeight="450.0" prefWidth="497.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="67.0" text="ID" />
+                <TableColumn fx:id="col_nom" prefWidth="83.0" text="nom " />
+                  <TableColumn fx:id="col_prenom" prefWidth="75.0" text="prenom" />
+                  <TableColumn fx:id="col_photo" prefWidth="66.0" text="photo" />
+                  <TableColumn fx:id="col_telephone" prefWidth="56.0" text="telephone" />
+                  <TableColumn fx:id="col_description" prefWidth="56.0" text="description" />
+                  <TableColumn fx:id="col_etatdispo" prefWidth="68.7999267578125" text="etatDispo" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
